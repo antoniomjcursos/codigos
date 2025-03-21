@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Restringido</title>
+    <script>
+        function verificarContrasena() {
+            var contrasena = document.getElementById("password").value;
+            var contrasenaCorrecta = "nullByteOff"; // Cambia esto por la contraseña deseada
+            var urlDestino = "https://view.genially.com/67cd6abd6ae57e814469ef99?idSlide=62a43ccb-8825-4d5b-b949-5756a222eed9"; // Cambia esto por la URL de destino
+
+            if (contrasena === contrasenaCorrecta) {
+                window.location.href = urlDestino;
+            } else {
+                alert("Contraseña incorrecta. Inténtalo de nuevo.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Código Acceso masterHack99</h2>
+    <input type="password" id="password" placeholder="Contraseña">
+    <button onclick="verificarContrasena()">Continuar</button>
+</body>
+</html>
