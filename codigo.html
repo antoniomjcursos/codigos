@@ -1,27 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceso Restringido</title>
-    <script>
-        function verificarContrasena() {
-            var contrasena = document.getElementById("password").value;
-            var contrasenaCorrecta = "nullByteOff"; // Cambia esto por la contraseña deseada
-            var urlDestino = "https://view.genially.com/67cd6abd6ae57e814469ef99?idSlide=62a43ccb-8825-4d5b-b949-5756a222eed9"; // Cambia esto por la URL de destino
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso Restringido</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://example.com/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5); /* Capa de transparencia para mejorar la legibilidad */
+      padding: 20px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 2em;
+      font-weight: bold;
+    }
+    input[type="password"] {
+      padding: 10px;
+      width: 300px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 1em;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      background-color: #007BFF;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <script>
+    function verificarContrasena() {
+      var contrasena = document.getElementById("password").value;
+      var contrasenaCorrecta = "nullByteOff"; // Cambia esto por la contraseña deseada
+      var urlDestino = "https://view.genially.com/67cd6abd6ae57e814469ef99?idSlide=62a43ccb-8825-4d5b-b949-5756a222eed9"; // Cambia esto por la URL de destino
 
-            if (contrasena === contrasenaCorrecta) {
-                window.location.href = urlDestino;
-            } else {
-                alert("Contraseña incorrecta. Inténtalo de nuevo.");
-            }
-            
-        }
-    </script>
+      if (contrasena === contrasenaCorrecta) {
+        window.location.href = urlDestino;
+      } else {
+        alert("Contraseña incorrecta. Inténtalo de nuevo.");
+      }
+    }
+  </script>
 </head>
 <body>
-    <h2>Código Acceso</h2>
+  <div class="container">
+    <h2>Código de Acceso</h2>
     <input type="password" id="password" placeholder="Contraseña">
     <button onclick="verificarContrasena()">Continuar</button>
+  </div>
 </body>
 </html>
